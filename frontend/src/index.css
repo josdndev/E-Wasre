@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la scrollbar */
+    margin-right: 2px; /* Desplazar la scrollbar 2px a la derecha */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Fondo transparente para el track */
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-white rounded-lg; /* Color blanco y bordes redondeados para el thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7); /* Color al pasar el mouse */
+}
+
+body {
+    @apply bg-gradient-to-r from-gray-900 via-purple-800 to-blue-900;
+    height: 100vh; /* Asegúrate de que el body ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina el margen predeterminado */
+    background-size: 200% 200%; /* Para un efecto de animación suave */
+    animation: gradient 15s ease infinite; /* Animación del gradiente */
+}
+
+/* Animación del gradiente */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
